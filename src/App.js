@@ -7,7 +7,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/list">
+        <Route path="/list/:list">
           <List />
         </Route>
         <Route path="/movie/:id">
