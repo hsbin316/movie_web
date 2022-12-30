@@ -1,8 +1,10 @@
 function Loading() {
   return (
-    <div>
-      <span>Loading...</span>
-    </div>
+    <>
+      <div className="loader">
+        <span>Loading...</span>
+      </div>
+    </>
   );
 }
 
