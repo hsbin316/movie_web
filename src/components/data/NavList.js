@@ -8,8 +8,8 @@ const navList = [
     path: "genre=romance",
   },
   {
-    title: "Action",
-    path: "genre=Action",
+    title: "Documentary",
+    path: "genre=Documentary",
   },
   {
     title: "Animation",

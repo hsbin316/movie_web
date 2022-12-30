@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Movie from "./Movie";
+import Loading from "../components/Loading";
 
 function Slide({ ytsApi }) {
   const [loading, setLoading] = useState(true);
@@ -17,7 +18,7 @@ function Slide({ ytsApi }) {
     <div>
       <div>
         {loading ? (
-          <h4>Loading...</h4>
+          <Loading />
         ) : (
           <div>
             {movies.map((movie) => (

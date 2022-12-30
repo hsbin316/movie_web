@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Loading from "../components/Loading";
 
 function List() {
   const { list } = useParams();
@@ -20,16 +22,18 @@ function List() {
   return (
     <div>
       {loading ? (
-        <h4>Loading...</h4>
+        <Loading />
       ) : (
         movies.map((movie) => (
-          <div>
+          <div key={movie.id}>
             <img
               src={movie.medium_cover_image}
               alt={movie.title}
               title={movie.title}
             />
-            <h2>{movie.title}</h2>
+            <h2>
+              <Link to={`/movie/${movie.id}`}>{movie.title}</Link>
+            </h2>
             <p>{movie.summary}</p>
           </div>
         ))

@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Loading from "../components/Loading";
 
 function Detail() {
   const { id } = useParams();
@@ -19,7 +20,7 @@ function Detail() {
   return (
     <div>
       {loading ? (
-        <h4>Loading...</h4>
+        <Loading />
       ) : (
         <div>
           <img
