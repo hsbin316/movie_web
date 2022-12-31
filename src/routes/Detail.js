@@ -19,23 +19,30 @@ function Detail() {
 
   return (
     <div>
+      <img
+        className="backgeoundImage"
+        src={movie.background_image_original}
+        alt={movie.title}
+      />
       {loading ? (
         <Loading />
       ) : (
-        <div>
+        <div className="detailMovie">
           <img
             src={movie.medium_cover_image}
             alt={movie.tite}
             title={movie.title}
           />
-          <div>{`${movie.title}(${movie.year})`}</div>
-          <div>{movie.rating}</div>
-          <div>{movie.runtime}</div>
-          <ul>
-            {movie.genres.map((genre, idx) => (
-              <li key={idx}>{genre}</li>
-            ))}
-          </ul>
+          <div>
+            <div className="detailTitle">{`${movie.title}(${movie.year})`}</div>
+            <div className="detailText">{`Rating : ${movie.rating}`}</div>
+            <div className="detailText">{`Runtime : ${movie.runtime}`}</div>
+            <ul className="detailGenres">
+              {movie.genres.map((genre, idx) => (
+                <li key={idx}>{genre}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       )}
     </div>

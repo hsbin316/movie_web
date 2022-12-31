@@ -11,7 +11,7 @@ function Home() {
             <Link to={`list/${nav.path}`}>{nav.title} Movie</Link>
           </h3>
           <Slide
-            ytsApi={`https://yts.mx/api/v2/list_movies.json?limit=5&${nav.path}&sort_by=year`}
+            ytsApi={`https://yts.mx/api/v2/list_movies.json?limit=3&${nav.path}&sort_by=year`}
           />
         </div>
       ))}

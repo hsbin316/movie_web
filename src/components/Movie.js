@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-import img from "./asdf.jpg";
+//import img from "./asdf.jpg";
 Movie.prototype = {
   id: PropTypes.number.isRequired,
   image: PropTypes.string.isRequired,
@@ -13,7 +13,7 @@ Movie.prototype = {
 function Movie({ id, image, title, summary, genres, rating, year }) {
   return (
     <div className="movie">
-      <img className="movieImg" src={img} alt={title} title={title} />
+      <img className="movieImg" src={image} alt={title} title={title} />
       <div>
         <h2 className="movieTitle">
           <Link to={`/movie/${id}`}>{title}</Link>
