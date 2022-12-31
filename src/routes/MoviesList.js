@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import Loading from "../components/Loading";
+import List from "../components/List";
 
-function List() {
+function MoviesList() {
   const { list } = useParams();
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
@@ -26,28 +26,18 @@ function List() {
           <Loading />
         ) : (
           movies.map((movie) => (
-            <div className="movieSummary" key={movie.id}>
-              <img
-                className="movieImage"
-                src={movie.medium_cover_image}
-                alt={movie.title}
-                title={movie.title}
-              />
-              <div>
-                <h2 className="movieTitle">
-                  <Link to={`/movie/${movie.id}`}>{movie.title}</Link>
-                </h2>
-                <span className="movieYear">{movie.year}</span>
-                <hr />
-                <div className="movieText">
-                  <p>{movie.summary}</p>
-                </div>
-              </div>
-            </div>
+            <List
+              key={movie.id}
+              id={movie.id}
+              image={movie.medium_cover_image}
+              title={movie.title}
+              year={movie.year}
+              summary={movie.summary}
+            />
           ))
         )}
       </div>
     </div>
   );
 }
-export default List;
+export default MoviesList;
