@@ -1,5 +1,5 @@
 import navList from "../components/data/NavList";
-import Slide from "../components/Slide";
+import Slide from "../components/Card";
 import { Link } from "react-router-dom";
 
 function Home() {

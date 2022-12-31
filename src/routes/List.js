@@ -3,8 +3,6 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Loading from "../components/Loading";
 
-//import img from "../components/asdf.jpg";
-
 function List() {
   const { list } = useParams();
   const [loading, setLoading] = useState(true);
@@ -45,25 +43,6 @@ function List() {
                   <p>{movie.summary}</p>
                 </div>
               </div>
-              {/* <img
-                className="movieImage"
-                src={img}
-                alt={"Asdf"}
-                title={"Asdfas"}
-              />
-              <div>
-                <h2 className="movieTitle">
-                  <Link to={`/movie/${movie.id}`}>{"asasdfdf"}</Link>
-                </h2>
-                <span className="movieYear">{"2022"}</span>
-                <div className="movieText">
-                  <p>
-                    {
-                      "asdfasdfasdfasdfasdbfjkabdfkjbajksdfblkajsdbfjkabdfjkabsdfjkbakjsdfbakjsbdfkjabsdfjkbajksdfbjakbdsfajkdfbakjdsbkjafbjksdfbakjsdfbkajsbdfakjsdbfkajbdfkajdsbfakjldbfakjdsfbakjdsfbjkdssbfksjdffbj"
-                    }
-                  </p>
-                </div>
-              </div> */}
             </div>
           ))
         )}

@@ -25,7 +25,13 @@ function Movie({ id, image, title, summary, genres, rating, year }) {
             <li key={g}>{g}</li>
           ))}
         </ul>
-        <p>{rating}</p>
+        <div className="rating">Rating</div>
+        <div className="movieProgress">
+          <div
+            className="movieRating"
+            style={{ width: `${rating * 10}%` }}
+          ></div>
+        </div>
       </div>
     </div>
   );

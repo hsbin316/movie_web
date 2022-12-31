@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Movie from "./Movie";
-import Loading from "../components/Loading";
+import Loading from "./Loading";
 
 function Slide({ ytsApi }) {
   const [loading, setLoading] = useState(true);
@@ -30,14 +30,6 @@ function Slide({ ytsApi }) {
               genres={movie.genres}
               rating={movie.rating}
               year={movie.year}
-              // key={idx}
-              // id={"Asdf"}
-              // image={"./asdf.png"}
-              // title={"ASdfasdfasdfasdf"}
-              // summary={""}
-              // genres={["asdf", "asdfa"]}
-              // rating={8}
-              // year={2022}
             />
           ))}
         </div>

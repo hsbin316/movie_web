@@ -40,10 +40,12 @@ body {
 /* slide js css */
 .movies {
   display: flex;
+  justify-content: space-between;
 }
 
 /* adsf */
 .movie {
+  flex-basis: 100%;
   background-color: #fef7ff;
   margin-bottom: 70px;
   font-weight: 300;
@@ -106,11 +108,34 @@ body {
   margin-right: 10px;
   font-size: 14px;
 }
+.rating {
+  font-size: 13px;
+}
+.movieProgress {
+  width: 50%;
+  background-color: #fff;
+  border: 0.5px solid #cd0c22;
+  height: 10px;
+}
+.movieRating {
+  background-color: #cd0c22;
+  height: 9px;
+}
+.movieProgress,
+.movieRating {
+  border-radius: 4px;
+}
 
 /* list */
 .movieList {
   padding: 50px;
   padding-top: 70px;
+}
+.movieSummary:hover,
+.movieImage:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .movieSummary {
   background-color: #fef7ff;
@@ -183,18 +208,24 @@ body {
 .detailMovie > div {
   margin-left: 30px;
 }
+.detailMovie > img:hover,
+.detailMovie > div:hover {
+  transform: translateY(-5px);
+  transition: all 0.4s ease;
+}
 .detailTitle {
   color: white;
   font-size: 28px;
   font-weight: 900;
 }
 .detailText {
-  margin-left: 15px;
-  color: white;
   font-size: 18px;
 }
 .detailGenres {
+  font-size: 14px;
+}
+.detailText,
+.detailGenres {
   margin-left: 15px;
   color: white;
-  font-size: 14px;
 }
