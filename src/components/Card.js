@@ -20,7 +20,7 @@ function Slide({ ytsApi }) {
         <Loading />
       ) : (
         <div className="movies">
-          {movies.map((movie, idx) => (
+          {movies.map((movie) => (
             <Movie
               key={movie.id}
               id={movie.id}

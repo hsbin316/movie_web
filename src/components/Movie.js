@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-//import img from "./asdf.jpg";
 Movie.prototype = {
   id: PropTypes.number.isRequired,
   image: PropTypes.string.isRequired,
