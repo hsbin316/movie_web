@@ -7,19 +7,18 @@ function MoviesList() {
   const { list } = useParams();
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
-  const getMovies = async () => {
-    const json = await (
-      await fetch(
-        `https://yts.mx/api/v2/list_movies.json?&${list}&sort_by=year`
-      )
-    ).json();
-    setMovies(json.data.movies);
-    setLoading(false);
-  };
   useEffect(() => {
+    const getMovies = async () => {
+      const json = await (
+        await fetch(
+          `https://yts.mx/api/v2/list_movies.json?&${list}&sort_by=year`
+        )
+      ).json();
+      setMovies(json.data.movies);
+      setLoading(false);
+    };
     getMovies();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [list]);
   return (
     <div className="container">
       <div className="movieList">

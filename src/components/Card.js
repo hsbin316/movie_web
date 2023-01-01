@@ -5,15 +5,14 @@ import Loading from "./Loading";
 function Slide({ ytsApi }) {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
-  const getMovies = async () => {
-    const json = await (await fetch(ytsApi)).json();
-    setMovies(json.data.movies);
-    setLoading(false);
-  };
   useEffect(() => {
+    const getMovies = async () => {
+      const json = await (await fetch(ytsApi)).json();
+      setMovies(json.data.movies);
+      setLoading(false);
+    };
     getMovies();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [ytsApi]);
 
   return (
     <div className="container">

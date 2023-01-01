@@ -138,8 +138,8 @@ body {
 }
 .movieProgress {
   width: 50%;
-  background-color: #fff;
-  border: 0.5px solid #cd0c22;
+  margin-top: 3px;
+  background-color: #cecece;
   height: 10px;
 }
 .movieRating {
@@ -204,7 +204,6 @@ body {
   justify-content: center;
   align-items: center;
   font-weight: 300;
-
   color: #fff;
 }
 
@@ -213,7 +212,6 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-
   min-width: 100%;
   min-height: 100%;
   filter: brightness(50%);
@@ -223,7 +221,6 @@ body {
   top: 30%;
   left: 20%;
   z-index: 10;
-
   display: flex;
   align-items: center;
 }
@@ -255,4 +252,44 @@ body {
 .detailGenres {
   margin-left: 15px;
   color: white;
+}
+
+/* nav js css */
+.nav {
+  display: flex;
+  justify-content: space-around;
+  height: 80px;
+}
+.nav:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+}
+.navTitle {
+  display: flex;
+  align-items: center;
+}
+.navTitle a {
+  font-size: 42px;
+  align-items: center;
+  text-decoration: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.nav > ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.nav > ul > li > a {
+  font-size: 16px;
+  padding: 4px 12px;
+  text-decoration: none;
+}
+.nav > ul > li > a:hover {
+  cursor: pointer;
+  color: #eda3ab;
+}
+.navTitle a,
+.nav > ul > li > a {
+  color: #cd0c22;
+  font-weight: bold;
 }
