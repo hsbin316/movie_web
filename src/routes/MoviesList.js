@@ -8,6 +8,7 @@ function MoviesList() {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
   useEffect(() => {
+    setLoading(true);
     const getMovies = async () => {
       const json = await (
         await fetch(
