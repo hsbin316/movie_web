@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Loading from "../components/Loading";
 import List from "../components/List";
+import ScrollTop from "../components/ScrollTop";
 
 function MoviesList() {
   const { list } = useParams();
@@ -37,6 +38,7 @@ function MoviesList() {
             />
           ))
         )}
+        <ScrollTop />
       </div>
     </div>
   );

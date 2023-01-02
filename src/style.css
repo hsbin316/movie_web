@@ -293,3 +293,25 @@ body {
   color: #cd0c22;
   font-weight: bold;
 }
+
+/* scrollTop js css */
+.scrollContainer {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  z-index: 1;
+}
+.top {
+  font-weight: bold;
+  font-size: 15px;
+  padding: 15px 10px;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 40%;
+  outline: none;
+  cursor: pointer;
+}
+.top:hover {
+  color: rgb(142, 26, 26);
+}
